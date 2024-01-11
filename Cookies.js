@@ -21,6 +21,7 @@ function CreateCookie(Name, Data, LifeTimeInMiliSeconds){
     Cookies[Name] = Data;
     document.cookie = NewCookie;
 }
+function ChangeCookie(Name, Data, LifeTimeInMiliSeconds){ CreateCookie(Name, Data, LifeTimeInMiliSeconds) };
 
 function DeleteCookie(Name){
     var LifeDate = new Date();
@@ -33,4 +34,4 @@ function DeleteCookie(Name){
 }
 
 //Export
-export {Cookies, CreateCookie, LoadCookies, ReLoadCookies, DeleteCookie};
+export {Cookies, CreateCookie, ChangeCookie, LoadCookies, ReLoadCookies, DeleteCookie};
